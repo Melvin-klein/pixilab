@@ -1,25 +1,18 @@
 import {
-    ArrowPathIcon,
-    ChartPieIcon,
-    CursorArrowRaysIcon,
-    FingerPrintIcon,
-    SquaresPlusIcon
+    TrophyIcon,
+    WrenchScrewdriverIcon,
+    HomeModernIcon
 } from "@heroicons/react/24/outline";
 import {PhoneIcon, PlayCircleIcon} from "@heroicons/react/20/solid";
 
 export const navigation = [
     { name: 'Accueil', href: '/', id: 'home' },
-    { name: 'Étapes de création', href: '/etapes-de-creation', id: 'steps' },
-    { name: 'Catalogue', href: '/catalogue', id: 'catalogue' },
+    //{ name: 'Étapes de création', href: '/etapes-de-creation', id: 'steps' },
+    //{ name: 'Catalogue', href: '/catalogue', id: 'catalogue' },
 ]
 
 export const solutions = [
-    { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-    { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-    { name: 'Security', description: "Your customers' data will be safe and secure", href: '#', icon: FingerPrintIcon },
-]
-
-export const callsToAction = [
-    { name: 'Appelez-moi', href: '#', icon: PlayCircleIcon },
-    { name: 'Écrivez-moi', href: '#', icon: PhoneIcon },
+    { name: 'Artisan', description: 'Faites connaître vos services', href: '#', icon: WrenchScrewdriverIcon },
+    { name: 'Hotellerie / Restauration', description: 'Faîtes rêver votre clientèle', href: '#', icon: HomeModernIcon },
+    { name: 'Sport', description: 'Fédérez les athlètes à votre projet', href: '#', icon: TrophyIcon },
 ]

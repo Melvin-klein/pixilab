@@ -1,6 +1,5 @@
 "use client";
 
-import Image from 'next/image'
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
@@ -23,7 +22,7 @@ import {
   ChatBubbleLeftRightIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { navigation, solutions, callsToAction } from  '@/app/menu'
+import { navigation, solutions } from  '@/app/menu'
 import Footer from '@/components/Footer'
 
 const products = [
@@ -176,9 +175,72 @@ function classNames(...classes) {
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
   return (
     <>
+      <Transition.Root show={open} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={setOpen}>
+          <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+              <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                  enterTo="opacity-100 translate-y-0 sm:scale-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+                  leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+              >
+                <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
+                  <div>
+                    <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100">
+                      <CheckIcon className="h-6 w-6 text-indigo-600" aria-hidden="true" />
+                    </div>
+                    <div className="mt-3 text-center sm:mt-5">
+                      <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
+                        Contactez-moi 😀
+                      </Dialog.Title>
+                      <div className="mt-2">
+                        <p className="text-sm text-gray-500">
+                          N'hésitez pas à m'envoyer un mail ou à m'appeler directement pour que je puisse répondre à vos questions. Me contacter ne vous engage dans aucun processus.
+                        </p>
+                        <p className="mt-5 text-sm text-gray-500">
+                          melvine.nargeot@pixilab.fr
+                        </p>
+                        <p className="mt-2 text-sm text-gray-500">
+                          06 13 72 89 62
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-5 sm:mt-6">
+                    <button
+                        type="button"
+                        className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        onClick={() => setOpen(false)}
+                    >
+                      Fermer
+                    </button>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition.Root>
       <div className="bg-gray-900">
         <header className="absolute inset-x-0 top-0 z-50">
           <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -240,27 +302,15 @@ export default function Home() {
                             </div>
                         ))}
                       </div>
-                      <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                        {callsToAction.map((item) => (
-                            <a
-                                key={item.name}
-                                href={item.href}
-                                className="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100"
-                            >
-                              <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                              {item.name}
-                            </a>
-                        ))}
-                      </div>
                     </div>
                   </Popover.Panel>
                 </Transition>
               </Popover>
             </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-              <a href="#" className="text-sm font-semibold leading-6 text-white">
+              <button type="button" className="text-sm font-semibold leading-6 text-white" onClick={() => setOpen(true)}>
                 Écrivez-moi <span aria-hidden="true">&rarr;</span>
-              </a>
+              </button>
             </div>
           </nav>
           <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -298,12 +348,11 @@ export default function Home() {
                     ))}
                   </div>
                   <div className="py-6">
-                    <a
-                        href="#"
+                    <button type="button" onClick={() => setOpen(true)}
                         className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800"
                     >
                       Écrivez-moi
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -311,7 +360,7 @@ export default function Home() {
           </Dialog>
         </header>
 
-        <div className="relative isolate overflow-hidden pt-14">
+        <div className="relative isolate overflow-hidden">
           <img
               src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
               alt=""
@@ -329,8 +378,8 @@ export default function Home() {
                 }}
             />
           </div>
-          <div className="mx-auto max-w-2xl py-32">
-            <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+          <div className="flex flex-col justify-center mx-auto max-w-2xl min-h-screen py-32">
+            {/*<div className="hidden sm:mb-8 sm:flex sm:justify-center">
               <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
                 De nouveaux blocs sont disponibles.{' '}
                 <a href="#" className="font-semibold text-white">
@@ -338,7 +387,7 @@ export default function Home() {
                   Voir le catalogue <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>
-            </div>
+            </div>*/}
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
                 Créons votre site vitrine <span className="text-indigo-500">ensemble</span>.
@@ -348,12 +397,11 @@ export default function Home() {
                 humain ainsi qu'une qualité de conception professionnelle à des tarifs concurrentiels. Vous souhaitez savoir comment ?
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
-                    href="#"
+                <button type="button" onClick={() => setOpen(true)}
                     className="rounded-md bg-indigo-500 px-10 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 >
                   Écrivez-moi  <span aria-hidden="true" className="inline-block ml-3">→</span>
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -472,12 +520,11 @@ export default function Home() {
               Vous n'avez donc pas à vous soucier de la santé de votre site, je m'en occupe. 👨‍💻
             </p>
             <div className="mt-8">
-              <a
-                  href="#"
+              <button type="button" onClick={() => setOpen(true)}
                   className="inline-flex rounded-md bg-indigo-500 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Ecrivez-moi <span aria-hidden="true" className="inline-block ml-3"> →</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -520,12 +567,11 @@ export default function Home() {
               Je mets un point d'honneur à respecter les bonnes pratiques en matière d'accessibilité, d'expérience utilisateur et d'optimisation pour les moteurs de recherche.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                  href="#"
+              <button type="button" onClick={() => setOpen(true)}
                   className="rounded-md bg-white px-10 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Écrivez-moi  <span aria-hidden="true" className="inline-block ml-3">→</span>
-              </a>
+              </button>
             </div>
             <svg
                 viewBox="0 0 1024 1024"
@@ -652,7 +698,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="relative isolate bg-white px-6 pb-12 pt-24 sm:pt-32 lg:px-8">
+      {/*<div className="relative isolate bg-white px-6 pb-12 pt-24 sm:pt-32 lg:px-8">
         <svg
             className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
             aria-hidden="true"
@@ -770,15 +816,15 @@ export default function Home() {
               <div>
                 <h3 className="border-l border-indigo-600 pl-6 font-semibold text-gray-900">Pixilab</h3>
                 <address className="border-l border-gray-200 pl-6 pt-2 not-italic text-gray-600">
-                  <p>melvine.nargeot@pixilab.fr</p>
-                  <p>06 13 72 89 62</p>
+                  <p>melvine.nargeot@test.fr</p>
+                  <p>06 00 00 00 00</p>
                 </address>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <Footer></Footer>
+      </div>*/}
+      <Footer />
     </>
   )
 }
