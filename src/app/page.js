@@ -20,6 +20,8 @@ import {
   BuildingStorefrontIcon,
   UsersIcon,
   ChatBubbleLeftRightIcon,
+  PhoneIcon,
+  PencilSquareIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { navigation, solutions } from  '@/app/menu'
@@ -49,21 +51,21 @@ const stats = [
 
 const features1 = [
   {
-    name: 'Présentez votre activité',
+    name: 'Élargissez votre clientèle',
     description:
-        'Votre site vitrine est le lieu où vous pouvez librement, sans limites, écrire et illustrer votre activité.',
-    icon: BuildingStorefrontIcon,
-  },
-  {
-    name: 'Attirez de nouveau client',
-    description:
-        'Ce site vous permettra de mettre en lumière vos arguments commerciaux pour attirer les nouveaux clients.',
+        'Votre site facilite le bouche à oreille en permettant à tous vos client de le partager facilement via les SMS ou les réseaux sociaux.',
     icon: UsersIcon,
   },
   {
-    name: 'Laissez-vous contacter',
+    name: 'Parlez de votre activité',
     description:
-        'Les sites vitrines comportent souvent des formulaires de contact qui permettent à vos clients de vous contacter.',
+        'Cest le lieu idéal pour parler de vous et informer, sans aucune limite, vos clients de l\'ensemble de vos prestations.',
+    icon: BuildingStorefrontIcon,
+  },
+  {
+    name: 'Facilitez la prise de contact',
+    description:
+        'Les sites vitrines que je vous propose peuvent être équipés de formulaires qui facilitent la prise de contact par le client.',
     icon: ChatBubbleLeftRightIcon,
   },
 ]
@@ -100,7 +102,7 @@ const tiers = [
     name: 'Conception',
     id: 'tier-conception',
     href: '#',
-    priceMonthly: '155,00 €',
+    priceMonthly: '380,00 €',
     description: "Tarif pour la conception de votre site vitrine incluant une page.",
     features: [
       'Une page web',
@@ -109,8 +111,7 @@ const tiers = [
       'Nom de domaine .fr offert',
       'Accès à tout le catalogue de blocs',
       'Blocs illimités par pages',
-      'Protégé par HTTPS',
-      'Mon contact téléphonique',
+      'Disponibilité téléphonique',
     ],
     featured: true,
   },
@@ -118,14 +119,14 @@ const tiers = [
     name: 'Maintenance',
     id: 'tier-maintenance',
     href: '#',
-    priceMonthly: '14,50 €',
+    priceMonthly: '16,00 €',
     description: 'Abonnement pour assurer la mise en ligne et la maintenance de votre site.',
     features: [
       'Hébergement et maintenance de votre site web',
       'Renouvellement de votre nom de domaine',
+      'Protégé par HTTPS',
       '1 modification par semaine des textes, images et couleurs gratuite',
       'Disponibilité téléphonique',
-      'Chat dédié aux clients',
     ],
     featured: false,
   },
@@ -135,7 +136,7 @@ const faqs = [
   {
     question: "Combien de pages sont incluses dans le tarif de base ?",
     answer:
-        "Le tarif de base à 90,00€ comprend une unique page avec un nombre illimité de blocs. Si vous souhaitez ajouter d'autres pages, cela est possible en ajoutant 50,00€ par page.",
+        "Le tarif de base à 380,00€ comprend une unique page avec un nombre illimité de blocs. Si vous souhaitez ajouter d'autres pages, cela est possible en ajoutant 140,00€ par page.",
   },
   {
     question: "Est-il possible de personnaliser le site web ?",
@@ -150,7 +151,7 @@ const faqs = [
   {
     question: "À qui appartient le code du site web ?",
     answer:
-        "Le code du site web vous appartient. Il vous suffira de me demander le code pour que je vous le l'envoie.",
+        "Le code du site web vous appartient. Il vous suffira de me demander le code pour que je vous l'envoie.",
   },
   {
     question: "Est-il possible de travailler avec un autre développeur une fois le site fini ?",
@@ -165,7 +166,7 @@ const faqs = [
   {
     question: "Comment arrêter l'abonnement ?",
     answer:
-        "Il vous suffit de me le signaler en m'envoyant un message ou en m'appelant, je ferai les changement dans les plus brefs délais.",
+        "Il vous suffit de me le signaler en m'envoyant un message ou en m'appelant, je ferai les changements dans les plus brefs délais.",
   },
 ]
 
@@ -207,7 +208,7 @@ export default function Home() {
                 <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
                   <div>
                     <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100">
-                      <CheckIcon className="h-6 w-6 text-indigo-600" aria-hidden="true" />
+                      <PhoneIcon className="h-6 w-6 text-indigo-600" aria-hidden="true" />
                     </div>
                     <div className="mt-3 text-center sm:mt-5">
                       <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
@@ -250,7 +251,7 @@ export default function Home() {
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
                 </svg>
-                <span className="ml-3 text-lg font-bold">Pixilabs</span>
+                <span className="ml-3 text-lg font-bold">Pixilab</span>
               </a>
             </div>
             <div className="flex lg:hidden">
@@ -308,8 +309,8 @@ export default function Home() {
               </Popover>
             </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-              <button type="button" className="text-sm font-semibold leading-6 text-white" onClick={() => setOpen(true)}>
-                Écrivez-moi <span aria-hidden="true">&rarr;</span>
+              <button type="button" className="flex items-center text-sm font-semibold leading-6 text-white" onClick={() => setOpen(true)}>
+                Écrivez-moi <ChatBubbleLeftRightIcon className="h-4 w-4 ml-2 text-white" aria-hidden="true" />
               </button>
             </div>
           </nav>
@@ -393,14 +394,14 @@ export default function Home() {
                 Créons votre site vitrine <span className="text-indigo-500">ensemble</span>.
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-300">
-                Je créé des sites vitrine pour les entreprises, associations et particuliers en proposant un service
-                humain ainsi qu'une qualité de conception professionnelle à des tarifs concurrentiels. Vous souhaitez savoir comment ?
+                Je créé des sites vitrines pour les entreprises, associations et particuliers en proposant une procédure simple et rapide, avec un service
+                humain et une qualité professionnelle.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <button type="button" onClick={() => setOpen(true)}
-                    className="rounded-md bg-indigo-500 px-10 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                    className="flex items-center rounded-md bg-indigo-500 px-10 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 >
-                  Écrivez-moi  <span aria-hidden="true" className="inline-block ml-3">→</span>
+                  Écrivez-moi <ChatBubbleLeftRightIcon className="h-4 w-4 ml-2 text-white" aria-hidden="true" />
                 </button>
               </div>
             </div>
@@ -428,7 +429,7 @@ export default function Home() {
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Les sites vitrines sont votre carte de visite sur le web.
-              Ils permettent à vos clients d'obtenir facilement des informations au sujet de votre activité.
+              Ils présentent votre activité à vos futurs clients et vous aident à gagner en visibilité.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -456,23 +457,80 @@ export default function Home() {
                 <h2 className="text-base font-semibold leading-7 text-indigo-600">Ma prestation</h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Choisissez la simplicité.</p>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  Je développe votre site web comme un Lego. C'est à dire que vous allez choisir avec mon aide les
-                  blocs qui vont composer sa structure. Ces blocs sont des morceaux de site web prédéfinis consultables dans <a href="#" className="text-indigo-500 underline">mon catalogue</a>.<br />
-                  <br />
-                  Une fois la structure de votre site web choisie, il ne vous restera plus qu'à me donner les textes
-                  et les images que vous souhaitez afficher. <br />
-                  <br />
-                  Félicitations ! Votre site est déjà en ligne 😀
+                  Vous n'avez besoin d'aucune compétence technique. De la conception à l'hébergement, en passant par la gestion de votre nom de domaine,
+                  je m'en occupe pour vous. Nous n'aurons qu'à définir ensemble la structure de votre site web
+                  en choisissant les blocs qui le composent et leurs couleurs pour que je puisse le concevoir.
+                  De même, lorsque votre site est en ligne, j'effectue sa surveillance et sa maintenance sans que vous ayez à vous en préoccuper.
                 </p>
               </div>
             </div>
             <img
-                src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2672&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Product screenshot"
                 className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
                 width={2432}
                 height={1442}
             />
+          </div>
+        </div>
+      </div>
+      <div className="bg-white pb-24">
+        <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-20 sm:rounded-3xl sm:px-10 sm:py-24 lg:py-24 xl:px-24">
+            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-0">
+              <div className="lg:row-start-2 lg:max-w-md">
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                  Votre temps est précieux.
+                </h2>
+                <p className="mt-6 text-lg leading-8 text-gray-300">
+                  Le processus de création ne comprend que 3 étapes.
+                </p>
+              </div>
+              <img
+                  src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Product screenshot"
+                  className="relative -z-20 min-w-full max-w-xl rounded-xl shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem] lg:max-w-none"
+                  width={2432}
+                  height={1442}
+              />
+              <div className="max-w-xl lg:row-start-3 lg:mt-10 lg:max-w-md lg:border-t lg:border-white/10 lg:pt-10">
+                <dl className="max-w-xl space-y-8 text-base leading-7 text-gray-300 lg:max-w-none">
+                  <div className="relative">
+                    <dt className="ml-9 inline-block font-semibold text-white">
+                      <UsersIcon className="absolute left-1 top-1 h-5 w-5 text-indigo-500" aria-hidden="true" />
+                      Rendez-vous de conception :
+                    </dt>{' '}
+                    <dd className="inline">Nous définissons ensemble la structure de votre site web en choisissant dans mon catalogue les blocs prédéfinis et les couleurs à utiliser.</dd>
+                  </div>
+                  <div className="relative">
+                    <dt className="ml-9 inline-block font-semibold text-white">
+                      <PencilSquareIcon className="absolute left-1 top-1 h-5 w-5 text-indigo-500" aria-hidden="true" />
+                      Rédaction du contenu :
+                    </dt>{' '}
+                    <dd className="inline">Pendant que je réalise votre site, vous me fournissez les textes et les images qui prendront place dans les blocs.</dd>
+                  </div>
+                  <div className="relative">
+                    <dt className="ml-9 inline-block font-semibold text-white">
+                      <UsersIcon className="absolute left-1 top-1 h-5 w-5 text-indigo-500" aria-hidden="true" />
+                      Rendez-vous de validation :
+                    </dt>{' '}
+                    <dd className="inline">Je vous présente le résultat et nous effectuons les dernières corrections avant la mise en ligne.</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div
+                className="pointer-events-none absolute left-12 top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-3xl lg:bottom-[-12rem] lg:top-auto lg:translate-y-0 lg:transform-gpu"
+                aria-hidden="true"
+            >
+              <div
+                  className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-25"
+                  style={{
+                    clipPath:
+                        'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                  }}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -515,15 +573,15 @@ export default function Home() {
             <p className="mt-6 text-base leading-7 text-gray-300">
               L'humain est au cœur de mon processus de conception et de maintenance.
               C'est à dire que quelque soit l'étape de vie de votre site,
-              vous pouvez priviligier les contacts par téléphone plutôt que par mail.
-              Car en plus de m'occuper de la conception, je vous accompagne également pour la maintenance.
-              Vous n'avez donc pas à vous soucier de la santé de votre site, je m'en occupe. 👨‍💻
+              vous pouvez me contacter par téléphone ou par mail. C'est avec plaisir que je réponds à vos questions
+              ou que j'apporte des modifications à votre site.
+              Ainsi, quoi qu'il se passe, vous êtes toujours accompagné(e) d'un développeur (moi 👨‍💻).
             </p>
             <div className="mt-8">
               <button type="button" onClick={() => setOpen(true)}
-                  className="inline-flex rounded-md bg-indigo-500 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="flex items-center rounded-md bg-indigo-500 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
-                Ecrivez-moi <span aria-hidden="true" className="inline-block ml-3"> →</span>
+                Ecrivez-moi <ChatBubbleLeftRightIcon className="h-4 w-4 ml-2 text-white" aria-hidden="true" />
               </button>
             </div>
           </div>
@@ -534,10 +592,10 @@ export default function Home() {
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-indigo-600">Vos avantages</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Pourquoi choisir Pixilabs ?
+              Pourquoi choisir Pixilab ?
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              En plus de l'aspect humain et de la simplicité qui sont l'essence de Pixilabs, je vous propose d'autres avantages.
+              En plus de l'aspect humain et de la simplicité qui sont l'essence de Pixilab, je vous propose d'autres avantages.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -564,13 +622,13 @@ export default function Home() {
               Pensé pour être accessible.
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-              Je mets un point d'honneur à respecter les bonnes pratiques en matière d'accessibilité, d'expérience utilisateur et d'optimisation pour les moteurs de recherche.
+              Je mets un point d'honneur à respecter les bonnes pratiques en matière d'accessibilité, d'expérience utilisateur et d'optimisation du code pour les moteurs de recherche.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <button type="button" onClick={() => setOpen(true)}
-                  className="rounded-md bg-white px-10 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="flex items-center rounded-md bg-white px-10 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
-                Écrivez-moi  <span aria-hidden="true" className="inline-block ml-3">→</span>
+                Écrivez-moi <ChatBubbleLeftRightIcon className="h-4 w-4 ml-2 text-gray-900" aria-hidden="true" />
               </button>
             </div>
             <svg
@@ -606,7 +664,7 @@ export default function Home() {
           </p>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
-          Ma prestation comprend un paiement unique pour la conception et la mise en ligne de votre site web ainsi qu'un abonnement pour toute sa durée de vie.
+          Ma prestation comprend un paiement pour la conception ainsi qu'un abonnement pour la mise en ligne et la maintenance de votre site.
         </p>
         <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
           {tiers.map((tier, tierIdx) => (
@@ -648,19 +706,19 @@ export default function Home() {
               </p>
             </div>
             <p className="mt-4 flex items-baseline gap-x-2">
-              <span className="text-3xl font-bold tracking-tight text-gray-900">+ 50,00 €</span>
+              <span className="text-3xl font-bold tracking-tight text-gray-900">+ 140,00 €</span>
               <span className="text-base text-gray-500">/pages</span>
             </p>
           </div>
           <div className="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 mt-10 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center">
             <div className="lg:min-w-0 lg:flex-1">
-              <h3 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Ajouter des blocs aux pages existantes</h3>
+              <h3 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Ajouter des blocs aux pages déjà existantes</h3>
               <p className="mt-1 text-base leading-7 text-gray-600">
                 À n'importe quel moment de la vie de votre site web, vous avez la possibilité de modifier vos pages.
               </p>
             </div>
             <p className="mt-4 flex items-baseline gap-x-2">
-              <span className="text-3xl font-bold tracking-tight text-gray-900">+ 6,25 €</span>
+              <span className="text-3xl font-bold tracking-tight text-gray-900">+ 20,00 €</span>
               <span className="text-base text-gray-500">/blocs</span>
             </p>
           </div>

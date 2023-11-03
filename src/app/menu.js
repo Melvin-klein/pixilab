@@ -12,7 +12,7 @@ export const navigation = [
 ]
 
 export const solutions = [
-    { name: 'Artisan', description: 'Faites connaître vos services', href: '#', icon: WrenchScrewdriverIcon },
-    { name: 'Hotellerie / Restauration', description: 'Faîtes rêver votre clientèle', href: '#', icon: HomeModernIcon },
-    { name: 'Sport', description: 'Fédérez les athlètes à votre projet', href: '#', icon: TrophyIcon },
+    { name: 'Artisan', description: 'Proposez vos services grâce à votre site.', href: '#', icon: WrenchScrewdriverIcon },
+    //{ name: 'Hotellerie / Restauration', description: 'Faîtes rêver votre clientèle', href: '#', icon: HomeModernIcon },
+    //{ name: 'Sport', description: 'Fédérez les athlètes à votre projet', href: '#', icon: TrophyIcon },
 ]
