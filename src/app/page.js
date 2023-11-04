@@ -294,7 +294,7 @@ export default function Home() {
                                 <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                               </div>
                               <div>
-                                <a href={item.href} className="font-semibold text-gray-900">
+                                <a href={item.href} target="_blank" className="font-semibold text-gray-900">
                                   {item.name}
                                   <span className="absolute inset-0" />
                                 </a>
@@ -346,6 +346,17 @@ export default function Home() {
                           {item.name}
                         </a>
                     ))}
+                    <hr className="bg-gray-100 text-gray-100"/>
+                    {solutions.map((item) => (
+                      <a
+                          key={item.name}
+                          href={item.href}
+                          className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                          target="_blank"
+                      >
+                        Exemple {item.name}
+                      </a>
+                  ))}
                   </div>
                 </div>
               </div>

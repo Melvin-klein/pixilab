@@ -12,7 +12,7 @@ export const navigation = [
 ]
 
 export const solutions = [
-    { name: 'Artisan', description: 'Proposez vos services grâce à votre site.', href: '#', icon: WrenchScrewdriverIcon },
+    { name: 'Artisan', description: 'Proposez vos services grâce à votre site.', href: 'https://artisan.demo.pixilab.fr', icon: WrenchScrewdriverIcon },
     //{ name: 'Hotellerie / Restauration', description: 'Faîtes rêver votre clientèle', href: '#', icon: HomeModernIcon },
     //{ name: 'Sport', description: 'Fédérez les athlètes à votre projet', href: '#', icon: TrophyIcon },
 ]
