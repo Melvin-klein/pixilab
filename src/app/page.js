@@ -222,7 +222,7 @@ export default function Home() {
                           melvine.nargeot@pixilab.fr
                         </p>
                         <p className="mt-2 text-sm text-gray-500">
-                          06 13 72 89 62
+                          0<span></span>6<span> </span>1<div className="inline"></div><span></span>3<span> </span>7<span></span>2<div className="inline"></div><span> </span>8<span></span>9<span> </span>6<span></span>2
                         </p>
                       </div>
                     </div>
