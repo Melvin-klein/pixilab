@@ -246,12 +246,12 @@ export default function Home() {
         <header className="absolute inset-x-0 top-0 z-50">
           <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
-              <a href="#" className="flex items-center -m-1.5 p-1.5">
-                <span className="sr-only">Pixilab</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+              <a href="#" className="flex items-center -m-1.5 p-1.5 text-white">
+                <span className="sr-only text-white">Pixilab</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-white">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
                 </svg>
-                <span className="ml-3 text-lg font-bold">Pixilab</span>
+                <span className="ml-3 text-lg font-bold text-white">Pixilab</span>
               </a>
             </div>
             <div className="flex lg:hidden">
@@ -318,13 +318,12 @@ export default function Home() {
             <div className="fixed inset-0 z-50" />
             <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
               <div className="flex items-center justify-between">
-                <a href="#" className="-m-1.5 p-1.5">
-                  <span className="sr-only">Your Company</span>
-                  <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                      alt=""
-                  />
+                <a href="#" className="flex items-center -m-1.5 p-1.5">
+                  <span className="sr-only">Pixilab</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-white">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                  </svg>
+                  <span className="ml-3 text-lg font-bold text-white">Pixilab</span>
                 </a>
                 <button
                     type="button"
@@ -347,13 +346,6 @@ export default function Home() {
                           {item.name}
                         </a>
                     ))}
-                  </div>
-                  <div className="py-6">
-                    <button type="button" onClick={() => setOpen(true)}
-                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                    >
-                      Écrivez-moi
-                    </button>
                   </div>
                 </div>
               </div>
@@ -390,14 +382,14 @@ export default function Home() {
               </div>
             </div>*/}
             <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              <h1 className="px-4 text-4xl font-bold tracking-tight text-white sm:text-6xl">
                 Créons votre site vitrine <span className="text-indigo-500">ensemble</span>.
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-300">
+              <p className="mt-6 px-4 sm:px-0 text-lg leading-8 text-gray-300">
                 Je créé des sites vitrines pour les entreprises, associations et particuliers en proposant une procédure simple et rapide, avec un service
                 humain et une qualité professionnelle.
               </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
+              <div className="mt-10 px-4 flex items-center justify-center gap-x-6">
                 <button type="button" onClick={() => setOpen(true)}
                     className="flex items-center rounded-md bg-indigo-500 px-10 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 >
@@ -449,7 +441,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden bg-white py-24">
+      <div className="overflow-hidden bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-8 lg:pt-4">
@@ -474,7 +466,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-white pb-24">
+      <div className="bg-white sm:pb-32">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-20 sm:rounded-3xl sm:px-10 sm:py-24 lg:py-24 xl:px-24">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-0">
@@ -587,7 +579,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-white py-24">
+      <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-indigo-600">Vos avantages</h2>
@@ -616,7 +608,7 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-white">
-        <div className="mx-auto max-w-7xl py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl pb-24 sm:pb-32 sm:px-6 lg:px-8">
           <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16">
             <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Pensé pour être accessible.
@@ -647,7 +639,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="relative isolate bg-white px-6 py-24 lg:px-8">
+      <div className="relative isolate bg-white px-6 pb-24 sm:pb-32 lg:px-8">
         <div className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">
           <div
               className="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
@@ -698,7 +690,7 @@ export default function Home() {
                 </ul>
               </div>
           ))}
-          <div className="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 mt-20 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center">
+          <div className="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 sm:mt-20 mt-5 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center">
             <div className="lg:min-w-0 lg:flex-1">
               <h3 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Ajouter d'autres pages</h3>
               <p className="mt-1 text-base leading-7 text-gray-600">
@@ -710,7 +702,7 @@ export default function Home() {
               <span className="text-base text-gray-500">/pages</span>
             </p>
           </div>
-          <div className="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 mt-10 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center">
+          <div className="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 mt-5 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center">
             <div className="lg:min-w-0 lg:flex-1">
               <h3 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Ajouter des blocs aux pages déjà existantes</h3>
               <p className="mt-1 text-base leading-7 text-gray-600">
@@ -725,7 +717,7 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-gray-900">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-4xl divide-y divide-white/10">
             <h2 className="text-2xl font-bold leading-10 tracking-tight text-white">Questions fréquement posées</h2>
             <dl className="mt-10 space-y-6 divide-y divide-white/10">
